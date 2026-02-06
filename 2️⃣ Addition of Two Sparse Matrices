@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int a[10][3], b[10][3], c[20][3];
+    int m, n, i, k = 0;
+
+    printf("Enter non-zero elements of Matrix A: ");
+    scanf("%d", &m);
+    for(i = 0; i < m; i++)
+        scanf("%d %d %d", &a[i][0], &a[i][1], &a[i][2]);
+
+    printf("Enter non-zero elements of Matrix B: ");
+    scanf("%d", &n);
+    for(i = 0; i < n; i++)
+        scanf("%d %d %d", &b[i][0], &b[i][1], &b[i][2]);
+
+    for(i = 0; i < m; i++)
+        c[k++] = a[i];
+    for(i = 0; i < n; i++)
+        c[k++] = b[i];
+
+    printf("Resultant Sparse Matrix:\n");
+    for(i = 0; i < k; i++)
+        printf("%d %d %d\n", c[i][0], c[i][1], c[i][2]);
+
+    return 0;
+}
